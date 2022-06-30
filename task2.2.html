@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2 CSS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        *
+        {
+            background-color:#efeeb7;
+            font-family: 'Roboto', sans-serif;
+        }
+        .container
+        {
+
+            margin:12px;
+        }
+       #head
+       {
+       background-color:rgb(170, 23, 23);
+       color:#efeeb7;
+       border-bottom: 15px solid #cc0808;
+       font-family: 'Roboto', sans-serif;
+       letter-spacing: 10px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       font-style: italic;
+       }
+       #head2
+       {
+        background-color:#14b114;
+        color:white;
+        padding-left:12px;
+        padding-top: 3px;
+        padding-bottom:3px;
+        font-family: 'Roboto', sans-serif;
+       }
+     
+       #list
+       {
+        color:brown;
+        font-style: italic;
+        font-weight: 600;
+       }
+       #zeus
+       {
+           text-decoration: none;
+       }
+        #image
+        {
+            height:150px;
+            width:300px;
+            background-color: white;
+            border:2px dotted black;
+        }
+        #inp
+        {
+            background-color: white;
+        }
+     
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id ="head"> My first web page  </h1>
+        <section>
+        <h3 id="head2">What this is</h3>
+        <p>Welcome to <em> my first webpage</em>. I created this webpage without the assistance of a webpage editor.
+            Just my little text editor and a keen <b>understanding of html </b> .</p>
+        </section>
+        <section>
+        <h3 id="head2">Why this is</h3>
+        <ul>
+            <li id="list">To learn HTML.</li>
+            <li id="list">List element</li>
+            <ol>
+                <li id="list">Home</li>
+                <li id="list">FAQ</li>
+                <li id="list">Contact</li>
+                <li id="list">About</li>
+            </ol>
+            <li id="list">Here I have created ordered and unordered list.</li>
+        </ul>
+    </section>
+     <section>
+            <h3 id="head2">ZeusLearning.com</h3>
+            <a href="https://www.zeuslearning.com/" target="blank" id="zeus">This link will open zeuslearning.com in a new tab.</a>
+    </section>
+          <section>
+            <h3 id="head2">On click of following image navigate to Google.com</h3>
+            <a href="https://www.google.com/search?q=google&rlz=1C1RXQR_enIN990IN990&oq=&aqs=chrome.0.69i59i450l8.140149j0j7&sourceid=chrome&ie=UTF-8" target="_blank" ><img src="download.jpg" alt="Error"  id="image"></a>
+        
+        </section>
+         <section>
+            <h4 style="color:#a19999 ;">Some random table</h4>
+            <table style="border : 1px solid black; background-color: #a19999;" >
+                <tbody style="border : 1px solid black; background-color: #a19999; ">
+                    <tr style="border : 1px solid black; background-color: #a19999;">
+                        <td style="border : 1px solid black; background-color: #a19999;">Row 1 ,cell 1</td>
+                        <td style="border : 1px solid black; background-color: #a19999;">Row 1 ,cell 2</td>
+                        <td style="border : 1px solid black; background-color: #a19999;" >Row 1 ,cell 3</td>
+                    </tr>
+                    <tr style="border : 1px solid black; background-color: #a19999;">
+                       <td style="border : 1px solid black; background-color: #a19999;">Row 2 ,cell 1</td>
+                       <td style="border : 1px solid black; background-color: #a19999;">Row 2 ,cell 2</td>
+                       <td style="border : 1px solid black; background-color: #a19999;">Row 2 ,cell 3</td>
+                   </tr>
+                   <tr style="border : 1px solid black">
+                       <td style="border : 1px solid black; background-color: #a19999;">Row 3 ,cell 1</td>
+                       <td style="border : 1px solid black; background-color: #a19999;">Row 3 ,cell 2</td>
+                       <td style="border : 1px solid black; background-color: #a19999;">Row 3 ,cell 3</td>
+                   </tr>
+                   <tr style="border : 1px solid black; background-color: #a19999;">
+                    <td style="border : 1px solid black; background-color:#a19999;">Row 4 ,cell 1</td>
+                    <td style="border : 1px solid black; background-color: #a19999;">Row 4 ,cell 2</td>
+                    <td style="border : 1px solid black; background-color: #a19999;">Row 4 ,cell 3</td>
+                </tr>
+                </tbody>
+             </table>
+            </section>
+            <section>
+             <h4 style="color:#a19999 ;">some random form</h4>
+             <form action="">
+             <p><b style="font-style:italic ;">NOTE : </b>It looks the part,but won't do anything.</p>
+             <p>Name :</p>
+             <input type="text" id="inp" >
+             <p>Comments :</p>
+             <textarea name="" id="inp" cols="30" rows="10"></textarea>
+             <p>Are you:</p>
+            <p> <input type="radio" name="myGender" id="myGender"> Male </p> 
+            <p> <input type="radio" name="myGender" id="myGender"> Female</p>
+              <input type="submit" value="Submit Query" style="background-color:#a19999 ;">
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>
