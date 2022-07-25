@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/31847b15b5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Dstyle.css">
+</head>
+
+<body>
+    <div class="web">
+        <nav class="navbar">
+            <img src="img1/logo used in header.svg" alt="">
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <ul class="nav-menu">
+                    <li><a href="">DASHBOARD</a><i class="fa fa-angle-down" aria-hidden="true" id="ic"></i></li>
+                    <li><a href="">CONTENT</a><i class="fa fa-angle-down" aria-hidden="true" id="ic"></i>
+                    <ul id="submenu">
+                    <li>
+                        <a href="">COURSE CATALOG</a> <i class="fa fa-angle-down" aria-hidden="true" id="ic"></i>
+                    </li>
+                    </ul>
+
+                    </li>
+                    <li><a href="">USERS</a><i class="fa fa-angle-down" aria-hidden="true" id="ic"></i></li>
+                    <li><a href="">REPORTS</a><i class="fa fa-angle-down" aria-hidden="true" id="ic"></i></li>
+                    <li><a href="">ADMIN</a><i class="fa fa-angle-down" aria-hidden="true" id="ic"></i></li>
+                    <div class="honda">
+                        <li class="honda1"><a href=""><img src="img1/alerts.svg" alt=""></a></li>
+                        <li class="honda2"><a href=""><img src="img1/announcements.svg" alt=""></a></li>
+                        <li class="honda3"><a href=""><img src="img1/account_circle.svg" alt=""></a></li>
+                    </div>
+                </ul>
+            </div>
+
+
+
+        </nav>
+
+
+        <div class="header">
+            <ul>
+                <li><a href=""><img src="img1/courses.svg" alt=""> 4 Course</a></li>
+                <li><a href=""><img src="img1/classes.svg" alt=""> 4 Classes</a></li>
+            </ul>
+        </div>
+        <div class="heading">
+            <p>Showing 4 of 4 courses</p>
+            <div class="sor">
+                <p style="text-align:right" ;>sort By : </p> <select name="Course Name" id="">
+                    <option value="">Course Name</option>
+                </select>
+                <a href=""> <img src="img1/sort.svg" alt=""></a>
+            </div>
+        </div>
+         <div class="aligns"></div>
+        <div id="container">
+
+        </div>
+        <div class="tags">
+            <p><a href="">About </a></p>
+            <div class="al"></div>
+            <p><a href=""> Contact Us</a></p>
+        </div>
+        <div class="footer">
+            <img src="img1/logo used in footer.svg" alt="">
+            <div class="al1"></div>
+            <p>Copyright @2020-2021</p>
+            <p> Zeus Systems Pvt. Ltd.</p>
+            <p>All Rights reserved</p>
+        </div>
+
+    </div>
+
+</body>
+<script>
+    const tog = document.getElementsByClassName('toggle-button')[0]
+    const navb = document.getElementsByClassName("navbar-links")[0]
+    tog.addEventListener('click', () => {
+        navb.classList.toggle('active');
+    })
+    const boxdeatails1 = [
+        {
+            "img": "img2/imageMask.png",
+            "topicname": "Acceleration",
+            "subject": "physics",
+            "grade1": "7",
+            "grade2": "+2",
+            "units": "8",
+            "Lessons": "18",
+            "Topics": "24",
+            "total_students": "50",
+            "date": "21-Jan-2020 -21-Aug-2020"
+        },
+        {
+            "img": "img2/imageMask-1.png",
+            "topicname": "Displacement Velocity and Speed",
+            "subject": "physics 2",
+            "grade1": "6",
+            "grade2": "+3",
+            "units": "2",
+            "Lessons": "15",
+            "Topics": "20",
+            "total_students": "",
+            "date": ""
+        },
+        {
+            "img": "img2/imageMask-3.png",
+            "topicname": "Introduction to Biology:Micro organisms and how they affect",
+            "subject": "biology",
+            "grade1": "7",
+            "grade2": "+2",
+            "units": "5",
+            "Lessons": "16",
+            "Topics": "22",
+            "total_students": "300",
+            "date": ""
+        },
+        {
+            "img": "img2/imageMask-2.png",
+            "topicname": "Introduction to High School Mathematics",
+            "subject": "Mathematics",
+            "grade1": "8",
+            "grade2": "+3",
+            "units": "",
+            "Lessons": "",
+            "Topics": "",
+            "total_students": "50",
+            "date": "21-Jan-2020 -21-Aug-2020"
+        }
+    ];
+    function boxTemplate(box) {
+        return ` 
+        <div class="box">
+            <div class="box-con">
+                <div class="boximg">
+                    <img src="${box.img}" alt="">
+                </div>
+                <div class="box-para">
+                    <p id="para">${box.topicname}</p>
+                    <p>${box.subject} | Grade ${box.grade1}  ${box.grade2} </p>
+                    <p> <b>${box.units} </b> Units <b>${box.Lessons}</b>Lessons <b> ${box.Topics} </b> Topics </p>
+                    <select name="" id="sele">
+                        <option value="">NO Classes</option>
+                        <option value="">Mr. Frank's Class B</option>
+                        <option value="">All Classes</option>
+                        <option value="">Mr. Frank's Class B</option>
+
+                    </select>
+                    <p>${box.total_students} students | ${box.date}</p>
+                </div>
+                <div class="star">
+                    <img src="img1/favourite.svg" alt="">
+                </div>
+            </div>
+            <div class="box-icon">
+                <a href=""><img src="img1/preview.svg" alt=""></a>
+                <a href=""><img src="img1/manage course.svg" alt=""></a>
+                <a href=""><img src="img1/grade submissions.svg" alt=""></a>
+                <a href=""><img src="img1/reports.svg" alt=""></a>
+            </div>
+        </div>
+        `;
+    }
+    document.getElementById("container").innerHTML = `
+ ${boxdeatails1.map(boxTemplate).join('')}
+ `;
+
+
+
+
+ 
+  const ic = document.getElementById("ic");
+  const sub = document.getElementById("submenu");
+  ic.addEventListener("click",function drop()
+  {
+    if(sub.style.display=='none')
+    {
+        sub.style.display= 'block';
+        sub.style.backgroundColor = 'white';
+    }
+    else
+    {
+        sub.style.display='none';
+    }
+  })
+</script>
+
+</html>
